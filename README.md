@@ -6,13 +6,10 @@
 3. go run main.go
 4. Now open browser or postman and call localhost:portnumber/route?url=url&rate_limit
 
-For example "http://localhost:8000/pagesource?url=https://www.facebook.com&retry_limit=3".
-You can notice that for the first time it took some time maybe hundred of ms or even few seconds.
-But for the second and third time it just took order of few ms as it was fetching from the cache. 
 
-You can see for yourself
-For the first time.
-![FirstTime](first_time.jpeg)
+For example "http://localhost:8000/pagesource?url=https://www.facebook.com&retry_limit=3"
+As you can see in this screenshot it took 1020ms to get response, because it's get the page and storing it
 
-And next time.
-![NextTime](next_time.jpeg)
+
+If you execute same request, it took 3ms because we already got the page and we are returning the data from cache
+
